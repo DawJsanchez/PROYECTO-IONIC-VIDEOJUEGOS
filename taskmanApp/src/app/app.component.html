@@ -1,0 +1,10 @@
+<!-- El contenedor de aplicación -->
+<div class="container"> 
+  
+  <!-- El menú de aplicación-->
+  <app-menu *ngIf="showMenu" (onCerrarSesion)="cerrarSesion()"></app-menu>
+
+  <!-- Aquí es donde se incluye el cuerpo de la aplicación -->
+  <router-outlet></router-outlet>
+</div>
+

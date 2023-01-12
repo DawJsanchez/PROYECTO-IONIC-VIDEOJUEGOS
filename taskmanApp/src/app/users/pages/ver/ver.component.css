@@ -1,0 +1,28 @@
+
+section{
+    width: 100%;
+}
+
+.container-section{
+    width: 100%;
+}
+
+.form-group{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 35%;
+    margin-top: 15px;
+}
+
+.form-group label{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-group input{
+    border-radius: 5px 5px;
+    border: 0.5px solid black;
+    text-align: center;
+    padding: 5px;
+}

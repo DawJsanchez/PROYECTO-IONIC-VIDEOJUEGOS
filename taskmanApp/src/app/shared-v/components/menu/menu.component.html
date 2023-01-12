@@ -1,0 +1,42 @@
+
+<!-- Configura la barra y asigna el color --> 	
+<nav class="navbar navbar-expand-md navbar-dark  mb-4" style="background-color: #333;">
+
+    <!-- Enlace al dashboard -->
+    <a id="img-logo" class="navbar-brand m-1" routerLink="dashboard"><img src="assets/img_logo.png" alt="Logo" style="width: 40px; height: 40px;"></a>
+
+    <!-- Menú desplegable -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+
+            <!-- Cuadro de mandos -->
+            <li class="nav-item active">
+                <a routerLink="dashboard-v" routerLinkActive="text-danger" class="nav-link" ><i class='bx bxs-dashboard' style='color:#F0586F'  ></i> Dashboard</a>
+            </li>
+
+            <!-- Videojuegos -->
+            <li class="nav-item active">
+                <a routerLink="videojuegos" routerLinkActive="text-danger" class="nav-link"><i class='bx bx-joystick' style='color:#F0586F'  ></i> Videojuegos</a>
+            </li>
+
+            <!-- Configuración -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarConfiguracion" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-cog' style='color:#F0586F' ></i> Configuración</a>
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarConfiguracion">
+                    <li>
+                        <a routerLink="usuarios" routerLinkActive="text-danger" class="dropdown-item"><i class='bx bxs-user' style='color:#e01b1b' ></i> Usuarios</a>
+                    </li> 
+                    <li>
+                        <a routerLink="tipos-videojuego" routerLinkActive="text-danger" class="dropdown-item"><i class='bx bxs-joystick-alt' style='color:#e01b1b' ></i> Tipos Videojuego</a>
+                    </li>
+                </ul>
+            </li>            
+        </ul>
+    </div>
+
+    <!-- Cerrar sesión -->
+    <!-- TODO Cerrar la sesión -->
+    <a class="navbar-brand m-2"><i class="bi bi-box-arrow-right" style="font-size:30px;" (click)="cerrarSesion()"></i></a>
+</nav>
+

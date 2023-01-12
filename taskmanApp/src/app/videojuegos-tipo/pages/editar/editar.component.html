@@ -1,0 +1,33 @@
+<form (ngSubmit)="guardar()" [formGroup]="formulario" class="container" autocomplete="off">
+
+    <div class="mx-auto">        
+
+        <!-- Identificador del videojuego -->
+        <input id="tipoVideojuegoId" name="tipoVideojuegoId" type="hidden" value="-1">
+
+        <!-- Título de la incidencia. Es texto -->
+        <div class="row">
+
+            <div class="col-md-12 mb-3">
+                <label for="nombre" class="form-label"><i class='bx bxs-user' style='color:#f0586f' ></i> Nombre</label>
+
+                <!-- El username -->
+                <input formControlName="nombre" type="text" class="form-control" [readonly]="actualizando">
+                <span class="form-text text-danger"></span> <!--*ngIf="esCampoNoValido('username')">{{ mensajeErrorCampo('username') }}-->
+            </div>
+
+        </div>
+          
+    </div>
+</form>    
+
+<hr>
+
+<!-- Botones de navegación -->
+<div class="row ">
+    <span class="col-7"></span>
+    <button id="btn-volver" style="background-color: #333; color: white;" class="btn col-2 m-3" routerLink="/tipos-videojuego"><i class='bx bx-left-arrow-circle' style='color:#fdfdfd'  ></i> Volver</button>
+    
+    <!-- Desabilita el guardar si hay una operación en curso -->
+    <button style="background-color: #f0586f; color: white;" class="btn col-2 m-3" (click)="guardar()" [disabled]="formulario.pending"><i class='bx bxs-save' style='color:#FFFFFF' ></i> Guardar</button>
+</div>
