@@ -1,4 +1,4 @@
-# Proyecto-Ionic-Daw2
+# PROYECTO-IONIC-VIDEOJUEGOS
 
 <pre>
 Proyecto de front para ionic
