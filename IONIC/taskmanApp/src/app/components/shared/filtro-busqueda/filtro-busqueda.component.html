@@ -1,0 +1,11 @@
+
+<!-- Formulario que va a hacer las búsquedas de información -->
+<form (ngSubmit)="buscar()" autocomplete="off">
+    <ion-input type="text" 
+        name="termino" 
+        class="form-control" 
+        [placeholder]="placeholder" 
+        [(ngModel)]="termino" 
+        (keypress)="onKeyPress($event)">
+    </ion-input>
+</form>  

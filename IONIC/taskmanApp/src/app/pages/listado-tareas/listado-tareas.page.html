@@ -1,0 +1,26 @@
+<app-header titulo="Listado tareas"></app-header> 
+
+<ion-content>
+
+  <ion-item>
+        <!-- Filtro de búsquedas -->
+        <app-filtro-busqueda 
+                placeholder="Introduce el término de búsqueda"
+                (onBusquedaEjecutada)="buscar($event)">
+        </app-filtro-busqueda>
+
+        <!-- Añade el botón añadir al final de a línea-->
+        <ion-button slot="end" routerLink="/crear-tarea">
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+
+  </ion-item>
+  
+  <ion-item>
+    <!-- 
+        Tabla con los resultados.
+    -->
+    <app-tabla-tareas [tareas]="tareas" (onBorrar)="borrarTarea($event)"></app-tabla-tareas>
+  </ion-item>            
+
+</ion-content>
