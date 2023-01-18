@@ -1,0 +1,7 @@
+{
+  "name": "taskmanApp-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
