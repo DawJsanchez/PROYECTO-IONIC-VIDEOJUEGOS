@@ -1,0 +1,34 @@
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="2">Título</ion-col>
+    <ion-col size="2">Tipo</ion-col>
+    <ion-col size="2">Estado</ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col></ion-col>
+  </ion-row>  
+  <ion-row *ngFor="let tarea of tareas; let i = index">
+    <ion-col size="2">{{ tarea.titulo }}</ion-col>
+    <ion-col size="2">{{ tarea.tipo }}</ion-col>
+    <ion-col size="2">{{ tarea.estado }}</ion-col>
+    <ion-col size="2">
+      <ion-button [routerLink]="['/ver-tarea', tarea.id_tarea ]" color="success">
+        <ion-icon name="eye"></ion-icon>
+      </ion-button>
+    </ion-col>    
+    <ion-col size="2">
+      <ion-button [routerLink]="['/editar-tarea', tarea.id_tarea ]" color="warning">
+        <ion-icon name="document"></ion-icon>
+      </ion-button>
+    </ion-col>    
+    <ion-col size="2">
+      <ion-button (click)="borrarTarea(i)" color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-col>        
+  </ion-row>
+</ion-grid>
+
+
