@@ -12,7 +12,7 @@ import { TaskmanSelectResponse } from '../../interfaces/select.interface';
 export class DatalistComponent implements OnInit {
 
   // Prefijo a emplear para los datalist
-  private dataListIdPrefix : string = '__dtlst';
+  private dataListIdPrefix : string = '__dtlst'; 
 
   // Número de secuencia
   private __secuencia: number = -1;
@@ -31,12 +31,12 @@ export class DatalistComponent implements OnInit {
   get inputId() : string {
     // Genera el ID del input
     return this.dataListIdPrefix + this.__secuencia + 'I';
-  }
+  }  
 
   get datalistId() : string {
     // Genera el ID del input
     return this.dataListIdPrefix + this.__secuencia + 'D';
-  }
+  }  
 
 
 //  - label.for
@@ -49,7 +49,7 @@ export class DatalistComponent implements OnInit {
     private generator: SecuentialNumberGeneratorService,
 
     // TODO. A ver como entro esto como argumento
-    //
+    // 
     private tiposVideojuegoservice: TiposVideojuegoService
 
   ) { }
@@ -59,11 +59,11 @@ export class DatalistComponent implements OnInit {
     // Obtiene el número de secuencia a asignar a este componente.
     this.__secuencia = this.generator.getSiguienteNumero();
 
-    // Carga los datos
+    // Carga los datos 
     this.dataSource('%').subscribe(respuesta => {
 
       if(respuesta.ok) {
-        // Todo ok. Gebería
+        // Todo ok. Gebería 
 
       }
     });
