@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Usuario} from "../services/usuarios.service";
+import {Usuario} from "../../services/usuarios.service";
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabla-usuarios',

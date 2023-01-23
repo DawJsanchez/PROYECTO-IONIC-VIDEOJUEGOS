@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {AutenticacionGuard} from "./auth/guards/autenticacion.guard";
 
 const routes: Routes = [
   {
@@ -12,17 +13,17 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'registrate',
-    loadChildren: () => import('./registrate/registrate.module').then( m => m.RegistratePageModule)
-  },
-  {
     path: 'usuarios/listado',
-    loadChildren: () => import('./users/pages/listado/listado.module').then( m => m.ListadoPageModule)
-  }
+    loadChildren: () => import('./users/pages/listado/listado.module').then( m => m.ListadoPageModule),
+    canLoad:[AutenticacionGuard],
+    canActivate:[AutenticacionGuard]
+
+  },
+  {
+    // Módulo de autenticación
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+  },
 
 ];
 

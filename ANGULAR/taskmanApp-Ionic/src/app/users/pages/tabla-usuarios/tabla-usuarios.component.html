@@ -1,0 +1,10 @@
+<ion-header>
+<ion-row>
+  <ion-col>Nombre usuario</ion-col><ion-col>Nombre completo</ion-col><ion-col>Rol</ion-col><ion-col>Acciones</ion-col>
+</ion-row>
+</ion-header>
+<ion-grid [fixed]="true" *ngFor="let usuario of usuarios; let i = index">
+  <ion-row>
+    <ion-col>{{usuario.username}}</ion-col><ion-col>{{usuario.nombreCompleto}}</ion-col><ion-col>{{usuario.rol}}</ion-col><ion-col>Botones</ion-col>
+  </ion-row>
+</ion-grid>
