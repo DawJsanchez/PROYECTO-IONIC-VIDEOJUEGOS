@@ -18,6 +18,12 @@ const routes: Routes = [
     canLoad:[AutenticacionGuard],
     canActivate:[AutenticacionGuard]
 
+  },  {
+    path: 'usuarios/ver',
+    loadChildren: () => import('./users/pages/ver/ver.page').then(m => m.VerPageModule),
+    canLoad:[AutenticacionGuard],
+    canActivate:[AutenticacionGuard]
+
   },
   {
     // Módulo de autenticación
