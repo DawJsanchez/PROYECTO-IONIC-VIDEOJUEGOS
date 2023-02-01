@@ -1,0 +1,93 @@
+
+<app-header titulo="editar tarea"></app-header>
+
+<ion-content>
+    <form (ngSubmit)="guardar()" [formGroup]="formulario" class="container" autocomplete="off">
+
+        <!-- Identificador de la tarea -->
+        <input id="tareaId" name="tareaId" type="hidden" value="-1">
+
+        <ion-list>
+            <ion-item>
+                <ion-label position="stacked">Título</ion-label>
+                <ion-input formControlName="titulo" type="text" class="form-control" [readonly]="actualizando"></ion-input>
+                
+                <!-- Esto no queda muy bien. Revisar como lo hace la gente -->
+                <ion-label class="form-text text-danger" *ngIf="esCampoNoValido('titulo')">{{ mensajeErrorCampo('titulo') }}</ion-label>                
+            </ion-item>
+
+            <ion-item>
+                
+                <ion-label position="stacked">Informador</ion-label>
+
+                <ion-select id="informador" formControlName="id_informador">
+                    <ion-select-option *ngFor="let u of selectInformador" [value]="u.id">{{ u.texto }}</ion-select-option>
+                </ion-select>                                    
+
+            </ion-item>
+
+            <ion-item>
+                
+                <ion-label position="stacked">Asignado</ion-label>
+
+                <ion-select id="asignado" formControlName="id_asignado">
+                    <ion-select-option *ngFor="let u of selectAsignado" [value]="u.id">{{ u.texto }}</ion-select-option>
+                </ion-select>                                    
+
+                <ion-label class="form-text text-danger" *ngIf="esCampoNoValido('id_asignado')">El usuario asignado no puede ser el mismo que el informador</ion-label>
+
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Tipo</ion-label>
+
+                <ion-select id="tipo" formControlName="id_tipo_tarea">
+                    <ion-select-option *ngFor="let tt of selectTiposTarea" [value]="tt.id">{{ tt.texto }}</ion-select-option>
+                </ion-select>                
+        
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Estado</ion-label>
+
+                <ion-select id="estado" formControlName="id_estado">
+                    <ion-select-option *ngFor="let e of selectEstadosTarea" [value]="e.id">{{ e.texto }}</ion-select-option>
+                </ion-select>                
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Fecha alta</ion-label>
+
+                <ion-input formControlName="fecha_alta" type="date"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Fecha vencimiento</ion-label>
+
+                <ion-input formControlName="fecha_vencimiento" type="date"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Hora vencimiento</ion-label>
+
+                <ion-input formControlName="hora_vencimiento" type="time"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Descripción</ion-label>
+
+                <ion-textarea formControlName="descripcion" rows="2"></ion-textarea>
+   
+                <ion-label *ngIf="esCampoNoValido('descripcion')">{{ mensajeErrorCampo('descripcion') }}</ion-label>                
+            </ion-item>
+
+        </ion-list>    
+    </form>        
+
+    <ion-list>
+        <ion-item>
+            <ion-button color="warning" slot="end" (click)="guardar()" [disabled]="formulario.pending">Guardar</ion-button>    
+        </ion-item>        
+    </ion-list>
+    
+</ion-content>

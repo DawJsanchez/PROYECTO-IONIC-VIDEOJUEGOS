@@ -1,0 +1,23 @@
+<!-- 
+    Entrada
+    - Label
+    - Placeholder
+    Genero
+    - label.for
+    - input.list
+    - input.id
+    - datalist.id
+-->
+<label [for]="inputId" class="form-label">{{label}}</label>
+                
+<input 
+        class="form-control" 
+        list="informadorDatalistOptions" 
+        [id]="datalistId" 
+        [placeholder]="placeholder" 
+        [(ngModel)]="nombreEntidad"
+        >
+
+<div class="invalid-feedback"></div>                
+<datalist [id]="datalistId">
+</datalist> 

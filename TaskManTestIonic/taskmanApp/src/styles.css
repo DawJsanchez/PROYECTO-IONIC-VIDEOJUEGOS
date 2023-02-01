@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*ANIMACIONES*/
+
+.slide-in-titles {
+    visibility: visible;
+    transform: translateX(-700%);
+    -webkit-transform: translateX(-700%);
+    animation: slide-in 2s forwards;
+    -webkit-animation: slide-in 2s forwards;
+  }
+  
+  @keyframes slide-in {
+    100% { transform: translateX(0%); }
+  }
+  
+  @-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+  }
+
+  .slide-in-titles2 {
+    visibility: visible;
+    transform: translateX(-2500%);
+    -webkit-transform: translateX(-2500%);
+    animation: slide-in 3s forwards;
+    -webkit-animation: slide-in 3s forwards;
+  }
+
+  .slide-in-btn{
+    visibility: visible;
+    transform: translateX(2000%);
+    -webkit-transform: translateX(2000%);
+    animation: slide-in 3s forwards;
+    -webkit-animation: slide-in 3s forwards;
+  }
+
+  .slide-in-img{
+    visibility: visible;
+    transform: translateX(-600%);
+    -webkit-transform: translateX(-600%);
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 1.5s forwards;
+  }
+
+  #btn-crear:hover{
+    background-color: #F0586F !important;
+  }
+
+  #btn-volver:hover{
+    background-color: #F0586F !important;
+  }
+
+  .slide-in-grafico-estados{
+    visibility: visible;
+    transform: translateX(-600%);
+    -webkit-transform: translateX(-600%);
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 1.5s forwards;
+  }
+
+  .slide-in-grafico-roles{
+    visibility: visible;
+    transform: translateX(-600%);
+    -webkit-transform: translateX(-600%);
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 1.5s forwards;
+  }
+
+  .slide-in-grafico-tipos{
+    visibility: visible;
+    transform: translateX(-600%);
+    -webkit-transform: translateX(-600%);
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 1.5s forwards;
+  }
+
+  .slide-in-footer-videojuegos{
+    visibility: visible;
+    transform: translateX(-300%);
+    -webkit-transform: translateX(-300%);
+    animation: slide-in 2s forwards;
+    -webkit-animation: slide-in 2s forwards;
+  }

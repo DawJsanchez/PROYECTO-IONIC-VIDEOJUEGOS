@@ -1,0 +1,59 @@
+<form (ngSubmit)="guardar()" [formGroup]="formulario" class="container" autocomplete="off">
+
+    <div class="mx-auto">
+
+        <!-- Identificador del videojuego -->
+        <input id="usuarioId" name="usuarioId" type="hidden" value="-1">
+
+        <!-- Título de la incidencia. Es texto -->
+        <div class="row">
+
+            <div class="col-md-12 mb-3">
+                <label for="username" class="form-label"><i class='bx bxs-user' style='color:#f0586f' ></i> Username</label>
+
+                <!-- El username -->
+                <input formControlName="username" type="text" class="form-control" [readonly]="actualizando">
+                <span class="form-text text-danger"></span> <!--*ngIf="esCampoNoValido('username')">{{ mensajeErrorCampo('username') }}-->
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade show active" id="datos" role="tabpanel" aria-labelledby="datos-tab">
+
+            <div class="col-md-12 mb-3">
+                <label for="password" class="form-label"><i class='bx bx-barcode' style='color:#f0586f' ></i> Password</label>
+                <!-- El password -->
+                <input formControlName="password" type="password" class="form-control" [readonly]="actualizando">
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label for="nombreCompleto" class="form-label"><i class='bx bxs-edit-alt' style="color: #F0586F;"></i> Nombre Completo</label>
+                <!-- El nombreCompleto -->
+                <input formControlName="nombreCompleto" type="text" class="form-control" [readonly]="actualizando">
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label for="rol" class="form-label"><i class='bx bxs-user-check' style='color:#F0586F' ></i> Rol</label>
+                <!-- El rol -->
+                <input formControlName="rol" type="text" class="form-control" [readonly]="actualizando">
+            </div>
+        </div>
+    </div>
+</form>
+
+<hr>
+
+<!-- Botones de navegación -->
+<div class="row ">
+    <span class="col-7"></span>
+    <button id="btn-volver" style="background-color: #333; color: white;" class="btn col-2 m-3" routerLink="/usuarios"><i class='bx bx-left-arrow-circle' style='color:#fdfdfd'  ></i> Volver</button>
+
+    <!-- Desabilita el guardar si hay una operación en curso -->
+    <button style="background-color: #f0586f; color: white;" class="btn col-2 m-3" (click)="guardar()" [disabled]="formulario.pending"><i class='bx bxs-save' style='color:#FFFFFF' ></i> Guardar</button>
+</div>
+
+<footer class="py-3" style="background-color: #333;">
+    <div class="container">
+    <p class="m-0 text-center text-white" style=" font-style: italic;"><img src="../../../../assets/img_logo.png" alt="Logo" style="width: 40px; height: 40px;"> DWEC | Gestor de videojuegos | <span class="subrayado" style="font-style: normal; color: crimson;">©2022</span></p>
+    </div>
+</footer>
