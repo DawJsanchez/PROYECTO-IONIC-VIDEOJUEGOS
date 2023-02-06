@@ -1,0 +1,44 @@
+
+<app-header titulo="editar usuario"></app-header>
+
+<ion-content>
+    <form (ngSubmit)="guardar()" [formGroup]="formulario" class="container" autocomplete="off">
+
+        <!-- Identificador del usuario -->
+        <input id="id_usuario" name="id_usuario" type="hidden" value="-1">
+
+        <ion-list>
+            <ion-item>
+                <ion-label position="stacked">Usuario</ion-label>
+                <ion-input formControlName="usuario" type="text" class="form-control"></ion-input>
+
+                <!-- Esto no queda muy bien. Revisar como lo hace la gente -->
+                <ion-label class="form-text text-danger" *ngIf="esCampoNoValido('usuario')">{{ mensajeErrorCampo('usuario') }}</ion-label>
+            </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input formControlName="password" type="password" class="form-control"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Nombre completo</ion-label>
+            <ion-input formControlName="nombre_completo" type="text" class="form-control"></ion-input>
+            <!--<ion-label class="form-text text-danger" *ngIf="esCampoNoValido('nombre_completo')">{{ mensajeErrorCampo('nombre_completo') }}</ion-label>-->
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Rol</ion-label>
+            <ion-input formControlName="rol" type="text" class="form-control"></ion-input>
+          </ion-item>
+
+        </ion-list>
+    </form>
+
+    <ion-list>
+        <ion-item>
+            <ion-button color="warning" slot="end" (click)="guardar()" [disabled]="formulario.pending">Guardar</ion-button>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

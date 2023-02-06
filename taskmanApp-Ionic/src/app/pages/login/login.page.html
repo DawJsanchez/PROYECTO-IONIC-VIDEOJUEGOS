@@ -1,0 +1,36 @@
+<app-header titulo="login" [volver]="false"></app-header>
+<ion-content>
+  <form [formGroup]="formularioLogin">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="login"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="pass" type="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="ingresar()" >
+          Entrar
+        </ion-button>
+
+
+
+
+
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button [routerLink]="['/crear-usuario']">Registrate</ion-button>
+
+  </ion-toolbar>
+</ion-footer>

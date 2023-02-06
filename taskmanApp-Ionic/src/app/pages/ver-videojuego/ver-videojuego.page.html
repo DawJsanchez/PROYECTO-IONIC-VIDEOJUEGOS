@@ -1,0 +1,47 @@
+<app-header titulo="Mostrar videojuego"></app-header>
+
+<ion-content>
+
+  <ion-card style="background-color: lightgray">
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title style="color: black">{{ videojuego?.titulo }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Tipo: {{ videojuego?.tipo }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Estado: {{ videojuego?.estado }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Informador: {{ videojuego?.informador }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Asignado: {{ videojuego?.asignado }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Descripcion: {{ videojuego?.descripcion }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Fecha de alta: {{ videojuego?.fecha_alta }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Fecha de vencimiento: {{ videojuego?.fecha_vencimiento }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Hora: {{ videojuego?.hora_vencimiento }}</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

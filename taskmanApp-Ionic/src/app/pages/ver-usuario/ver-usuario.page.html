@@ -1,0 +1,23 @@
+<app-header titulo="Mostrar usuario"></app-header>
+
+<ion-content>
+
+  <ion-card style="background-color: lightgray">
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title style="color: black;">{{ usuario?.usuario }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Nombre Completo: {{ usuario?.nombre_completo }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Rol: {{ usuario?.rol }}</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

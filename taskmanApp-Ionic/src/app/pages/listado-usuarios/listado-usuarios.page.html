@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lista usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+        <!-- Filtro de búsquedas -->
+        <app-filtro-busqueda
+                placeholder="Introduce el término de búsqueda"
+                (onBusquedaEjecutada)="buscar($event)">
+        </app-filtro-busqueda>
+
+        <!-- Añade el botón añadir al final de a línea-->
+
+        <ion-button slot="end" [routerLink]="['/crear-usuario' ]" >
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+
+  </ion-item>
+
+  <ion-item>
+    <!--
+        Tabla con los resultados.
+    -->
+    <app-tabla-usuarios [usuarios]="usuarios" (onBorrar)="borrarUsuario($event)"></app-tabla-usuarios>
+  </ion-item>
+
+</ion-content>

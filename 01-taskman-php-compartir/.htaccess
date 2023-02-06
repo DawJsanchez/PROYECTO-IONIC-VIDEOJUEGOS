@@ -1,0 +1,6 @@
+# Permite acceso al servicio desde estos orígenes
+Header set Access-Control-Allow-Origin http://localhost:8100
+
+# Con este atributo del encabezado se permiten todas las cabeceras
+# En caso contrario no es posible, por ejemplo, recibir JSON
+Header set Access-Control-Allow-Headers *

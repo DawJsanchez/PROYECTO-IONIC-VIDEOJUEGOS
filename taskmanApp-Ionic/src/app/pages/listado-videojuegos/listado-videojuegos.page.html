@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listado videojuegos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-item>
+        <!-- Filtro de búsquedas -->
+        <app-filtro-busqueda
+                placeholder="Introduce el término de búsqueda"
+                (onBusquedaEjecutada)="buscar($event)">
+        </app-filtro-busqueda>
+
+        <!-- Añade el botón añadir al final de a línea-->
+
+        <ion-button slot="end" [routerLink]="['/crear-videojuego' ]" >
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+
+  </ion-item>
+
+  <ion-item>
+    <!--
+        Tabla con los resultados.
+    -->
+    <app-tabla-videojuegos [videojuegos]="videojuegos" (onBorrar)="borrarVideojuego($event)"></app-tabla-videojuegos>
+  </ion-item>
+
+</ion-content>
