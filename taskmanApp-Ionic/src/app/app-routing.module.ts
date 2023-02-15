@@ -62,9 +62,16 @@ const routes: Routes = [
    canActivate:[AutenticacionGuard]
   },
   {
+    path: 'listado',
+    loadChildren: () => import('./defensa/listado/listado.module').then( m => m.ListadoPageModule),
+    canActivate:[AutenticacionGuard]
+  },
+  {
     path: '**',
     redirectTo: 'dashboard'
   },
+
+
 ];
 
 @NgModule({

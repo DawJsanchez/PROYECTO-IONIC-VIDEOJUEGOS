@@ -14,29 +14,32 @@ import { TablaUsuariosComponent } from "./usuarios/tabla-usuarios/tabla-usuarios
 
 import {CanvasJSChart} from "../../lib/canvasjs.angular.component";
 import {UsuariosPorRolComponent} from "./dashboard/usuarios-por-rol/usuarios-por-rol.component";
+import {ComponenteDefensaComponent} from "./componente-defensa/componente-defensa.component";
 
 
 @NgModule({
-  declarations: [
-    CanvasJSChart,
-    HeaderComponent,
-    VideojuegosPorEstadoComponent ,
-    VideojuegosPorTipoComponent,
-    UsuariosPorRolComponent,
-    FiltroBusquedaComponent,
-    TablaVideojuegosComponent,
-    TablaUsuariosComponent
-  ],
-  exports: [
-    HeaderComponent,
-    CanvasJSChart,
-    VideojuegosPorEstadoComponent,
-    VideojuegosPorTipoComponent,
-    UsuariosPorRolComponent,
-    FiltroBusquedaComponent,
-    TablaVideojuegosComponent,
-    TablaUsuariosComponent
-  ],
+    declarations: [
+        CanvasJSChart,
+        HeaderComponent,
+        VideojuegosPorEstadoComponent,
+        VideojuegosPorTipoComponent,
+        UsuariosPorRolComponent,
+        FiltroBusquedaComponent,
+        TablaVideojuegosComponent,
+        TablaUsuariosComponent,
+        ComponenteDefensaComponent
+    ],
+    exports: [
+        HeaderComponent,
+        CanvasJSChart,
+        VideojuegosPorEstadoComponent,
+        VideojuegosPorTipoComponent,
+        UsuariosPorRolComponent,
+        FiltroBusquedaComponent,
+        TablaVideojuegosComponent,
+        TablaUsuariosComponent,
+        ComponenteDefensaComponent
+    ],
   imports: [
     CommonModule,
     FormsModule,

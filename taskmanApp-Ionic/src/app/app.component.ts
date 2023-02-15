@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
     { title: 'Dashboard', url: '/dashboard', icon: 'speedometer' },
     { title: 'Videojuegos', url: '/listado-videojuegos', icon: 'rocket' },
     { title: 'Usuarios', url: '/listado-usuarios', icon: 'people' },
+    { title: 'Defensas', url: '/listado', icon: 'mail' }
   ];
 
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
